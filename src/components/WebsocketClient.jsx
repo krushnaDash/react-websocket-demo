@@ -5,7 +5,8 @@ import useWebSocket, { ReadyState } from 'react-use-websocket';
 
 function WebsocketEx() {
     //Public API that will echo messages sent to it back to the client
-    const [socketUrl, setSocketUrl] = useState('ws://localhost:9000/chat');
+    //const [socketUrl, setSocketUrl] = useState('ws://localhost:9000/chat');
+    const [socketUrl, setSocketUrl] = useState('ws://localhost:9000/chat-stream');
     const [messageHistory, setMessageHistory] = useState([]);
 
     const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
